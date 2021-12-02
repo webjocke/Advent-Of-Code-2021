@@ -1,0 +1,2 @@
+y=require('fs').readFileSync('input.txt', 'utf8').split("\n").map(i=>({c:i.split(" ")[0],a:parseInt(i.split(" ")[1])})).reduce((t, c) => ({h: c.c=="forward"?t.h+c.a:t.h, d: c.c=="forward"?t.d+t.a*c.a:t.d, a: c.c=="up"?t.a-c.a:c.c=="down"?t.a+c.a:t.a}), {h: 0, d: 0, a:0})
+console.log(y.h*y.d)

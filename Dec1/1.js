@@ -1,0 +1,1 @@
+console.log(require('fs').readFileSync('input.txt', 'utf8').split("\n").map(i=>parseInt(i)).reduce((t, c, i, a) => t+(a[i]>a[i-1]?1:0), 0))
